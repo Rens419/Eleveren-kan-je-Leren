@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Activate with: git config core.hooksPath .githooks
+exec "$(git rev-parse --show-toplevel)/scripts/check-no-customer-data.sh"

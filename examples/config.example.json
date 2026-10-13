@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "defaults": {
+    "ticketSystem": "Autotask",
+    "durationMinutes": 240,
+    "justificationTemplate": "Ticket {ticket} – {customer}",
+    "pimGroupTemplate": "G_Cipp_{name}_Editor",
+    "gdapDelayMinutes": 3
+  },
+  "auth": null,
+  "portals": [
+    {
+      "id": "cipp",
+      "label": "CIPP",
+      "url": "https://cipp.example.com/?tenantFilter={initialDomain}",
+      "enabledByDefault": true
+    }
+  ],
+  "customers": [
+    {
+      "name": "Contoso",
+      "initialDomain": "contoso.onmicrosoft.com",
+      "tenantId": "00000000-0000-0000-0000-000000000001",
+      "defaultDomain": "contoso.com",
+      "pimGroups": ["G_Cipp_Contoso_Editor"]
+    },
+    {
+      "name": "Fabrikam",
+      "initialDomain": "fabrikam.onmicrosoft.com",
+      "tenantId": "00000000-0000-0000-0000-000000000002",
+      "pimGroups": ["G_Cipp_Fabrikam_Editor"]
+    },
+    {
+      "name": "Northwind Traders",
+      "initialDomain": "northwindtraders.onmicrosoft.com",
+      "tenantId": "00000000-0000-0000-0000-000000000003",
+      "pimGroups": ["G_Cipp_NorthwindTraders_Editor"],
+      "portals": ["m365", "exchange", "entra", "intune", "cipp"]
+    },
+    {
+      "name": "Tailspin Toys",
+      "initialDomain": "tailspintoys.onmicrosoft.com",
+      "tenantId": "00000000-0000-0000-0000-000000000004",
+      "pimGroups": ["G_Cipp_TailspinToys_Editor"]
+    },
+    {
+      "name": "Woodgrove Bank",
+      "initialDomain": "woodgrovebank.onmicrosoft.com",
+      "pimGroups": ["G_Cipp_WoodgroveBank_Editor"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/
+.DS_Store
+*.log
+
+# Customer data must never be committed. The real config lives in
+# ~/Library/Application Support/io.github.rens419.eleveren/ — these patterns
+# catch copies that end up in the working tree by accident.
+config.json
+settings.json
+*.local.json
+*.eleveren.json
+eleveren-config*.json
+bookmarks*.html
+favorites*.html
+favorieten*.html
+Bookmarks
